@@ -49,20 +49,26 @@ echo "Hasil OR (a || b): " . ($hasilOr ? 'True' : 'False') . "<br>";
 echo "Hasil NOT a (!$a): " . ($hasilNotA ? 'True' : 'False') . "<br>";
 echo "Hasil NOT b (!$b): " . ($hasilNotB ? 'True' : 'False') . "<br>";
 
-$a += $b;
-$a -= $b;
-$a *= $b;
-$a /= $b;
-$a %= $b;
 
 echo "<br>";
+echo "<br>";
 
+$a += $b;
 echo "Hasil a += b: {$a} <br>";
+
+$a -= $b;
 echo "Hasil a -= b: {$a} <br>";
+
+$a *= $b;
 echo "Hasil a *= b: {$a} <br>";
+
+$a /= $b;
 echo "Hasil a /= b: {$a} <br>";
+
+$a %= $b;
 echo "Hasil a %= b: {$a} <br>";
 
+echo "<br>";
 echo "<br>";
 
 $hasilIdentik = $a === $b;
