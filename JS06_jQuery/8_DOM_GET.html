@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    alert($("#test1").text()); // Menampilkan teks dari elemen dengan id test1
+                });
+                $("#btn2").click(function(){
+                    alert($("#test2").html()); // Menampilkan HTML dari elemen dengan id test2
+                });
+                $("#btn3").click(function(){
+                    alert($("#test3").val()); // Menampilkan nilai dari input dengan id test3
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="test1">This is the first paragraph.</p>
+        <p id="test2">This is <b>another</b> paragraph</p>
+        <p>Your Name: <input type="text" id="test3"></p>
+
+        <button id="btn1">Get Text</button>
+        <button id="btn2">Get HTML</button>
+        <button id="btn3">Get Value</button>
+    </body>
+</html>

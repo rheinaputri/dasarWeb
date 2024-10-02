@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            #paragraf{
+                width: 600px;
+                height: 80px;
+                background-color: pink;
+                line-height: 80px;
+                text-align: center;
+                font-size: 30px;
+            }
+        </style>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // Menggunakan selector yang benar untuk ID #paragraf
+                $("#paragraf").click(function(){
+                    $(this).css("color", "white");
+                });
+                $("#paragraf").mouseover(function(){
+                    $(this).css("background-color", "silver");
+                });
+                $("#paragraf").mouseout(function(){
+                    $(this).css("background-color","blue");
+                });
+                $("#paragraf").dblclick(function(){
+                    $(this).css("border", "solid 3px black");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="paragraf"> Praktikum Minggu ke-04 JQuery</p>
+    </body>
+</html>

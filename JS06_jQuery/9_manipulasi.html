@@ -1,0 +1,34 @@
+<!-- File HTML -->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styleCSS.css">
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // Menambahkan kelas 'important' ke semua elemen div
+                $(".btn1").click(function(){
+                    $("div").addClass("important");
+                });
+                // Menghapus kelas 'blue' dari h1, h2, dan p
+                $(".btn2").click(function(){
+                    $("h1, h2, p").removeClass("blue");
+                });
+                // Mengatur background color dan font size untuk h1, h2, p, dan div
+                $(".btn3").click(function(){
+                    $("h1, h2, p, div").css({"background-color": "yellow", "font-size": "100%" });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 class="blue">Heading 1</h1> <!-- Menambahkan kelas blue untuk pengujian -->
+        <h2 class="blue">Heading 2</h2> <!-- Menambahkan kelas blue untuk pengujian -->
+        <p class="blue">This is a paragraph.</p> <!-- Menambahkan kelas blue untuk pengujian -->
+        <p>This is another paragraph.</p>
+        <div>This is some important text!</div><br>
+
+        <button class="btn1">Add classes to elements</button>
+        <button class="btn2">Remove classes from elements</button>
+        <button class="btn3">Set styles to elements</button>
+    </body>
+</html>
