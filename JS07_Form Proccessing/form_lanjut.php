@@ -4,7 +4,7 @@
     </head>
     <body>
         <h2>Form Contoh</h2>
-        <form method="POST" action="">
+        <form method="POST" action="proses_lanjut.php">
             <label for="buah">Pilih Buah:</label>
             <select name="buah" id="buah">
                 <option value="apel">Apel</option>
