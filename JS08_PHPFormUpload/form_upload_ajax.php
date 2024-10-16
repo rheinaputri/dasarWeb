@@ -12,7 +12,7 @@
                 <input type="file" name="files[]" id="file" class="file-input" multiple accept=".jpg, .jpeg, .png, .gif">
                 <label for="file" class="file-label">Pilih File</label>
             </div> 
-            <button type="submit" name="submit" class="upload-button" id="upload-button" disabled>Unggah</button>
+            <button type="submit" name="submit" class="upload-button" id="upload-button" disabled> Unggah </button>
         </form>
         <div id="status" class="upload-status"></div>
     </div>
@@ -20,4 +20,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="upload.js"></script>
 </body>
+
 </html>
