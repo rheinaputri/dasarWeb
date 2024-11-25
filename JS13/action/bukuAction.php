@@ -1,5 +1,5 @@
 <?php
-include('../lib/Session.php');
+include('../lib/session.php');
 $session = new Session();
 
 if ($session->get('is_login') !== true) {
@@ -7,7 +7,7 @@ if ($session->get('is_login') !== true) {
 }
 
 include_once('../model/BukuModel.php');
-include_once('../lib/Secure.php');
+include_once('../lib/secure.php');
 
 $act = isset($_GET['act']) ? strtolower($_GET['act']) : '';
 

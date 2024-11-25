@@ -8,7 +8,7 @@ class BukuModel extends Model
 
     public function __construct()
     {
-        include_once('../lib/Connection.php');
+        include_once('../lib/connection.php');
         $this->db = $db;
         $this->db->set_charset('utf8');
     }

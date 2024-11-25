@@ -42,6 +42,13 @@
 </section>
 <div class="modal fade" id="form-data" style="display: none;" aria-hidden="true">
     <form action="action/kategoriAction.php?act=save" method="post" id="form-tambah">
+        <!-- Ukuran Modal
+        modal-sm : Modal ukuran kecil
+        modal-md : Modal ukuran sedang
+        modal-lg : Modal ukuran besar
+        modal-xl : Modal ukuran sangat besar
+        penerapan setelah class modal-dialog seperti di bawah
+        -->
         <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
@@ -69,28 +76,26 @@
 </div>
 <script>
     function tambahData() {
-    $('#form-data').modal('show'); // Tampilkan modal
-    $('#form-tambah').attr('action', 'action/kategoriAction.php?act=save'); // Set action form
-    $('#kategori_kode').val(''); // Kosongkan input
-    $('#kategori_nama').val(''); // Kosongkan input
-    $('.modal-title').text('Tambah Kategori'); // Ubah judul modal menjadi "Tambah Kategori"
-}
+        $('#form-data').modal('show');
+        $('#form-tambah').attr('action', 'action/kategoriAction.php?act=save');
+        $('#kategori_kode').val('');
+        $('#kategori_nama').val('');
+    }
 
-function editData(id) {
-    $.ajax({
-        url: 'action/kategoriAction.php?act=get&id=' + id,
-        method: 'post',
-        success: function(response) {
-            var data = JSON.parse(response);
-            $('#form-data').modal('show'); // Tampilkan modal
-            $('#form-tambah').attr('action', 'action/kategoriAction.php?act=update&id=' + id); // Set action form
-            $('#kategori_kode').val(data.kategori_kode); // Isi dengan data kategori kode
-            $('#kategori_nama').val(data.kategori_nama); // Isi dengan data kategori nama
-            $('.modal-title').text('Edit Kategori'); // Ubah judul modal menjadi "Edit Kategori"
-        }
-    });
-}
-
+    function editData(id) {
+        $.ajax({
+            url: 'action/kategoriAction.php?act=get&id=' + id,
+            method: 'post',
+            success: function(response) {
+                var data = JSON.parse(response);
+                $('#form-data').modal('show');
+                $('#form-tambah').attr('action',
+                    'action/kategoriAction.php?act=update&id=' + id);
+                $('#kategori_kode').val(data.kategori_kode);
+                $('#kategori_nama').val(data.kategori_nama);
+            }
+        });
+    }
 
     function deleteData(id) {
         if (confirm('Apakah anda yakin?')) {

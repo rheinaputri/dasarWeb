@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../lib/Connection.php';
+require_once __DIR__ . '/../lib/connection.php';
 
 $kategori = getKategori();
 ?>
